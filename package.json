@@ -21,7 +21,11 @@
         "email": "hello@ghost.org",
         "url": "https://ghost.org"
     },
-    "repository": {
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
     "devDependencies": {
         "@tryghost/release-utils": "0.3.2",
         "autoprefixer": "9.5.1",
