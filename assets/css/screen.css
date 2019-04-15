@@ -622,6 +622,72 @@ make sure this only happens on large viewports / desktop-ish devices.
     display: none;
 }
 
+/* Infusionsoft */
+.ifs-form {
+    background-color: rgb(247, 247, 247);
+    flex: 1 1 100%;
+    padding: 36px;
+    position: relative;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.ifs-form:before {
+    background-color: rgb(247, 247, 247);
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+
+.ifs-form h2 {
+    color: rgb(133, 133, 133);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.ifs-form form {
+    display: flex;
+    justify-content: center;
+}
+
+.ifs-form .infusion-submit {
+    margin-left: 8px;
+}
+
+.ifs-form .infusion-submit button {
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(232, 141, 74);
+    border-radius: 2px;
+    color: rgb(232, 141, 74);
+    font-size: 11px;
+    font-weight: 600;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.ifs-form .infusion-submit button:hover {
+    background-color: #2D7DD2;
+    border: 1px solid #2D7DD2;
+    color: white;
+}
+
+.ifs-form input {
+    border-radius: 2px;
+    border: 1px solid #ededed;
+    border-top-color: rgb(237, 237, 237);
+    padding: 5px 2px 6px 8px;
+    font-size: 11px;
+    color: #000;
+    border-top-color: rgb(216, 216, 216);
+}
 
 /* Adjust some margins for smaller screens */
 @media (max-width: 650px) {
