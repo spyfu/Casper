@@ -32,7 +32,7 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-    background: #f4f8fb;
+    background: rgb(254, 254, 254);
 }
 
 .img {
@@ -113,33 +113,10 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
-    background-size: cover;
-}
+    background-color: rgb(254, 254, 254);
+    margin-bottom: 72px;
 
-.site-header:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    display: block;
-    background: rgba(0,0,0,0.18);
-}
 
-.site-header:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: auto;
-    left: 0;
-    z-index: 10;
-    display: block;
-    height: 80px;
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0));
 }
 
 .site-header.no-image:before,
