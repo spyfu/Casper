@@ -50,7 +50,6 @@ body {
     text-indent: -9999px;
 }
 
-
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
 
@@ -164,6 +163,15 @@ body {
     .site-description {
         font-size: 1.8rem;
     }
+}
+
+.alert {
+    background: rgb(45,125,210);
+    background: linear-gradient(90deg, rgba(45,125,210,1) 0%, rgba(89,180,235,1) 100%);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    padding: 18px 24px;
 }
 
 
