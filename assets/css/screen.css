@@ -109,8 +109,6 @@ body {
 
 .site-header {
     position: relative;
-    padding-top: 12px;
-    padding-bottom: 12px;
     color: #fff;
     background-color: rgb(254, 254, 254);
     margin-bottom: 72px;
@@ -262,7 +260,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     opacity: 1;
 }
 
-.site-nav-right {
+.site-nav-right, .site-nav-mobile {
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -344,7 +342,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     fill: #fff;
 }
 
-/* @media (max-width: 700px) {
+@media (max-width: 700px) {
     .site-header {
         padding-right: 0;
         padding-left: 0;
@@ -353,22 +351,60 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         margin-right: 0;
         padding-left: 4vw;
     }
-    .site-nav-right {
-        display: none;
-    }
-} */
-
-.nacho-nav {
-    height: 48px;
-    padding: 0 4vw;
 }
 
+/* Nacho nav */
+.nacho-nav {
+    height: 60px;
+    padding: 0 4vw;
+    padding: 12px;
+}
 .nacho-nav .site-nav-right a {
     font-size: 1.3rem;
     font-weight: 500;
     color: #15171a;
     margin-left: 12px;
 }
+.nacho-nav ul {
+    display: flex;
+    align-items:baseline;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+.nacho-nav ul li {
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+
+/* mobile Nacho nav */
+.site-nav-mobile, .mobile-nav-menu {
+    display: none;
+}
+.mobile-nav-menu {
+    border-top: 1px solid #ebebeb;
+}
+.mobile-nav-menu ul {
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+@media(max-width: 560px) {
+    .site-nav-mobile {
+        display: block;
+    }
+    .site-nav-right {
+        display: none;
+    }
+}
+.hamburger {
+    color:#090a0b;
+    font-size: 34px;
+    line-height: 30px;
+    margin: auto;
+}
+
+/* end Nacho nav */
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */

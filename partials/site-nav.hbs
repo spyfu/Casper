@@ -3,7 +3,31 @@
         <a href="/" class="nacho-logo site-nav-logo"><img data-v-4eecbfb2="" src="https://cdn.nachoanalytics.com/dist/img/logotype-full-color-black.a3cd7a76.svg"></a>
     </div>
     <div class="site-nav-right">
-        <a href="http://help.nachoanalytics.com">Tutorials</a>
-        <a href="https://www.nachoanalytics.com/pricing" class="nacho-button">Start Free Trial</a>
+        <div class="nav-items">
+            <ul>
+                <li><a href="http://help.nachoanalytics.com">Tutorials</a></li>
+                <li><a href="https://www.nachoanalytics.com/pricing" class="nacho-button">Start Free Trial</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="site-nav-mobile">
+        <span data-nacho="hamburger" class="hamburger">☰</span>
     </div>
 </nav>
+<div class="mobile-nav-menu" data-nacho="mobile-nav-menu">
+    <ul>
+        <li><a href="http://help.nachoanalytics.com">Tutorials</a></li>
+        <li><a href="https://www.nachoanalytics.com/pricing" class="nacho-button">Start Free Trial</a></li>
+    </ul>
+</div>
+
+
+{{#contentFor "scripts"}}
+<script>
+$(document).ready(function() {
+    $('[data-nacho="hamburger"]').click(function() {
+        $('[data-nacho="mobile-nav-menu"]').slideToggle()
+    })
+})
+</script>
+{{/contentFor}}
