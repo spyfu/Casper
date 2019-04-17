@@ -90,7 +90,7 @@ body {
 /* 3. Special Template Styles
 /* ---------------------------------------------------------- */
 
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
     .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
@@ -101,7 +101,7 @@ body {
         position: relative;
         top: -70px;
     }
-}
+} */
 
 
 /* 4. Site Header
@@ -114,8 +114,6 @@ body {
     color: #fff;
     background-color: rgb(254, 254, 254);
     margin-bottom: 72px;
-
-
 }
 
 .site-header.no-image:before,
@@ -165,13 +163,17 @@ body {
     }
 }
 
-.alert {
+.nacho-alert {
     background: rgb(45,125,210);
     background: linear-gradient(90deg, rgba(45,125,210,1) 0%, rgba(89,180,235,1) 100%);
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 18px;
     padding: 18px 24px;
+}
+
+.nacho-header {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
 
 
@@ -342,7 +344,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     fill: #fff;
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
     .site-header {
         padding-right: 0;
         padding-left: 0;
@@ -354,8 +356,19 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     .site-nav-right {
         display: none;
     }
+} */
+
+.nacho-nav {
+    height: 48px;
+    padding: 0 4vw;
 }
 
+.nacho-nav .site-nav-right a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #15171a;
+    margin-left: 12px;
+}
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
@@ -2328,4 +2341,34 @@ Usage (In Ghost editor):
     .site-footer-nav a:first-child {
         margin-left: 0;
     }
+}
+
+/* 12. Nacho Reusable Classes
+/* ---------------------------------------------------------- */
+
+.nacho-button {
+    text-transform: uppercase;
+    color: white !important;
+    text-align: center;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    outline: 0;
+    min-height: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    border-radius: .25rem;
+}
+
+.nacho-button:hover {
+    background: white;
+    border: 1px solid #e67e22;
+    color: #e67e22 !important;
+    text-decoration: none;
 }
