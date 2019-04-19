@@ -391,6 +391,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin-top: 24px;
     margin-bottom: 32px;
 }
+.mobile-nav-menu ul li {
+    list-style-type: none;
+}
 
 @media(max-width: 560px) {
     .site-nav-mobile {
