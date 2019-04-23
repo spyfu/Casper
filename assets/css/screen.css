@@ -1846,7 +1846,6 @@ Usage (In Ghost editor):
 
 .floating-header-share-tw,
 .floating-header-share-fb {
-    display: block;
     align-items: center;
     width: 60px;
     height: 60px;
@@ -1862,6 +1861,8 @@ Usage (In Ghost editor):
 
 .floating-header-share-fb {
     background: #005e99;
+    /* NACHO */
+    display: none !important;
 }
 
 .progress {
