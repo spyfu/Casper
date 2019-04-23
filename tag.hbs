@@ -9,12 +9,24 @@
 </header>
 
 <div class="site-header-content">
-    <h1 class="site-title"><span class="nacho-category">I want to learn about:</span> {{name}}</h1>
-    <h2 class="site-description">
-        {{#if description}}
-            {{description}}
-        {{/if}}
-    </h2>
+    <div class="tag-title-wrapper">
+        <h1 class="site-title">
+            <span class="nacho-category">I want to learn about:
+                <span class="faux-dropdown" data-nacho="faux-dropdown"><span class="nacho-underline"> {{name}}</span>
+                    <span class="nacho-dropdown-arrow" data-nacho="arrow-down">▼</span>
+                    <span class="nacho-dropdown-arrow" data-nacho="arrow-up" style="display: none">▲</span>
+                </span>
+            </h1>
+        <div class="tags-dropdown" data-nacho="faux-options" style="display: none;">
+            {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+            {{#foreach tags}}
+            <a href='{{ url }}' class="nacho-link nacho-category-dropdown">
+                <h2>{{ name }}</h2>
+            </a>
+            {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
 </div>
 {{/tag}}
 
@@ -29,3 +41,15 @@
         </div>
     </div>
 </main>
+
+{{#contentFor "scripts"}}
+<script>
+$(document).ready(function() {
+    $('[data-nacho="faux-dropdown"]').click(function() {
+        $('[data-nacho="faux-options"]').slideToggle();
+        $('[data-nacho="arrow-up"]').toggle();
+        $('[data-nacho="arrow-down"]').toggle();
+    })
+})
+</script>
+{{/contentFor}}
