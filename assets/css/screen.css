@@ -743,6 +743,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .ifs-form input {
+    min-width: 180px;
     border-radius: 2px;
     border: 1px solid #ededed;
     border-top-color: rgb(237, 237, 237);
