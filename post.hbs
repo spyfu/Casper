@@ -214,6 +214,16 @@ $(document).ready(function () {
     if (!urlParam("signup")) {
         $('[data-nacho="ifs-form"]').show()
     }
+
+    // resize code examples to correct height
+    function auto_grow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight)+"px";
+    }
+
+    $('.nacho-code').each(function(index, value) {
+        auto_grow($('.nacho-code')[index])
+    })
 });
 </script>
 {{/contentFor}}
