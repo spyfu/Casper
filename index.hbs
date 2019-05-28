@@ -20,7 +20,7 @@ into the {body} of the default.hbs template --}}
                     {{> "post-card"}}
                 {{/foreach}}
             {{/get}}
-            {{> "ifs-form"}}
+            {{> "email-form"}}
             {{#get "posts" limit="all" filter="featured:false" as |featured|}}
                 {{#foreach posts}}
                     {{> "post-card"}}

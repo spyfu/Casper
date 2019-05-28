@@ -79,7 +79,7 @@ into the {body} of the default.hbs template --}}
             </section>
             --}}
 
-            {{> "ifs-form"}}
+            {{> "email-form"}}
 
         </article>
 
@@ -212,7 +212,7 @@ $(document).ready(function () {
 
     // nacho
     if (!urlParam("signup")) {
-        $('[data-nacho="ifs-form"]').show()
+        $('[data-nacho="email-form"]').show()
     }
 
     // resize code examples to correct height
