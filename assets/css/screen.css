@@ -710,9 +710,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .ifs-form .infusion-submit button {
     background-color: rgb(247, 247, 247);
-    border: 1px solid rgb(232, 141, 74);
+    border: 1px solid #63C986;
     border-radius: 2px;
-    color: rgb(232, 141, 74);
+    color: #63C986;
     font-size: 11px;
     font-weight: 600;
     padding-left: 12px;
@@ -720,8 +720,8 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .ifs-form .infusion-submit button:hover {
-    background-color: #2D7DD2;
-    border: 1px solid #2D7DD2;
+    background-color: #63C986;
+    border: none;
     color: white;
 }
 
@@ -2393,15 +2393,15 @@ Usage (In Ghost editor):
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    background-color: #e67e22;
-    border: 1px solid #e67e22;
+    background-color: #63C986;
+    border: 1px solid #63C986;
     border-radius: .25rem;
 }
 
 .nacho-button:hover {
     background: white;
-    border: 1px solid #e67e22;
-    color: #e67e22 !important;
+    border: 1px solid #63C986;
+    color: #63C986 !important;
     text-decoration: none;
 }
 
