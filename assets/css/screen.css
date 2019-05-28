@@ -736,6 +736,10 @@ make sure this only happens on large viewports / desktop-ish devices.
     border-top-color: rgb(216, 216, 216);
 }
 
+.ifs-form .mailchimp-wrapper {
+    display: flex;
+}
+
 /* Adjust some margins for smaller screens */
 @media (max-width: 650px) {
     .post-feed {
