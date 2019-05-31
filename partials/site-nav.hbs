@@ -7,8 +7,12 @@
     <div class="site-nav-right">
         <div class="nav-items">
             <ul>
+                <li><a href="https://www.nachoanalytics.com/how-it-works">How it Works</a></li>
+                <li><a href="https://www.nachoanalytics.com/blog/">Blog</a></li>
                 <li><a href="http://help.nachoanalytics.com">Tutorials</a></li>
-                <li><a href="https://www.nachoanalytics.com/pricing" class="nacho-button">Start Free Trial</a></li>
+                <li><a href="https://www.nachoanalytics.com/pricing">Pricing</a></li>
+                <li data-guest-only><a href="https://www.nachoanalytics.com/login">Login</a></li>
+                <li data-guest-only><a href="https://www.nachoanalytics.com/pricing" class="nacho-button">Start Free Trial</a></li>
             </ul>
         </div>
     </div>
@@ -29,7 +33,13 @@
 $(document).ready(function() {
     $('[data-nacho="hamburger"]').click(function() {
         $('[data-nacho="mobile-nav-menu"]').slideToggle()
-    })
-})
+    });
+});
+
+$.get('//www.nachoanalytics.com/api/account/getactivestate', function (data) {
+    if (data.user.isLoggedIn) {
+        $("[data-guest-only]").fadeOut();
+    }
+});
 </script>
 {{/contentFor}}
