@@ -2507,5 +2507,5 @@ Usage (In Ghost editor):
     align-self: end;
     padding-right: 18px;
     max-height: 360px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
