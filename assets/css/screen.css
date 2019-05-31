@@ -2486,6 +2486,9 @@ Usage (In Ghost editor):
 /* 13. Nacho Categories
 /* ---------------------------------------------------------- */
 
+.nacho-category-header {
+}
+
 .nacho-category {
     font-weight: 200;
 }
@@ -2503,4 +2506,6 @@ Usage (In Ghost editor):
     flex-direction: column;
     align-self: end;
     padding-right: 18px;
+    max-height: 360px;
+    overflow: scroll;
 }

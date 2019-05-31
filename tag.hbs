@@ -6,7 +6,7 @@
     {{> "site-nav"}}
 </header>
 
-<div class="site-header-content">
+<div class="site-header-content nacho-category-header">
     <div class="tag-title-wrapper">
         <h1 class="site-title">
             <span class="nacho-category">I want to learn about:
@@ -44,7 +44,9 @@
 <script>
 $(document).ready(function() {
     $('[data-nacho="faux-dropdown"]').click(function() {
-        $('[data-nacho="faux-options"]').slideToggle();
+        let options = $('[data-nacho="faux-options"]');
+        options.slideToggle();
+
         $('[data-nacho="arrow-up"]').toggle();
         $('[data-nacho="arrow-down"]').toggle();
     })
