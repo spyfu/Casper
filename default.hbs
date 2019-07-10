@@ -10,6 +10,7 @@
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
@@ -71,6 +72,14 @@
         crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}"></script>
+
+    {{!-- jQuery + Fitvids does NOT make Wistia videos responsive --}}
+    <script>
+    $(".post-content").fitVids({ 
+	customSelector: "iframe[src^='https://fast.wistia.net']"
+     });
+    </script>
+
 
     {{#if pagination.pages}}
     <script src="{{asset "built/infinitescroll.js"}}"></script>
