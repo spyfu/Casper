@@ -44,6 +44,18 @@ into the {body} of the default.hbs template --}}
             {{/if}}
 
             <section class="post-full-content">
+                <aside id="cta-right" style="display: none">
+                    <header>
+                        <h4>Want <strong>Unlimited</strong> Access?</h4>
+                        <p>Sign up for a SpyFu premium plan</p>
+                    </header>
+                    <section class="cta-content">
+                        <p class="hero">Only $39<span class="subscript">/mo</span></p>
+                        <img src="https://www.spyfu.com/static/img/paywall-spot-icon.svg" />
+                        <p>Unlimited projects, data, and PDFs.</p>
+                        <a class="btn-container" href="https://www.spyfu.com/mainpurchase?cta=1">Get Started</a>
+                    </section>
+                </aside>
                 <div class="post-content">
                     {{content}}
                 </div>
@@ -215,6 +227,19 @@ $(document).ready(function () {
         $('[data-nacho="email-form"]').show()
     }
 
+    function onNachoScroll() {
+        var wideContentHeight = 1080;
+        var minWidth = 1600;
+
+        if ($(window).scrollTop() > wideContentHeight && $(window).width() > minWidth) {
+            $('#cta-right').show();
+        }
+        if ($(window).scrollTop() < wideContentHeight) {
+            $('#cta-right').hide();
+        }
+    }
+    window.addEventListener('scroll', onNachoScroll, {passive: true});
+    
     // resize code examples to correct height
     function auto_grow(element) {
         element.style.height = "5px";

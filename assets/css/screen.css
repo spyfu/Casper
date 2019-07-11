@@ -2509,3 +2509,48 @@ Usage (In Ghost editor):
     max-height: 360px;
     overflow-y: scroll;
 }
+
+#cta-right {
+    width: 260px;
+    height: 524px;
+    position: fixed;
+    right: 18px;
+    bottom: 8px;
+    background-color: white;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+}
+
+
+#cta-right .cta-content {
+    padding: 12px;
+}
+
+#cta-right .cta-content p {
+    font-size: 14px;
+    color: #808080;
+}
+
+#cta-right .cta-content p.hero {
+    font-size: 32px;
+    margin-top: 0px;
+    color: #808080;
+}
+
+#cta-right .cta-content img {
+    max-width: 240px;
+    margin:auto;
+}
+
+#cta-right .cta-content .btn-container {
+    background-color: #60c889;
+    margin:  18px  0;
+    padding: 14px 56px 14px;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px lightGray;
+}
