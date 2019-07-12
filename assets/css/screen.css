@@ -2512,14 +2512,15 @@ Usage (In Ghost editor):
 
 #cta-right {
     width: 260px;
-    height: 524px;
+    height: 546px;
     position: fixed;
-    right: 18px;
+    left: 18px;
     bottom: 8px;
     background-color: white;
     border-radius: 6px;
     text-align: center;
     border: 1px solid #e3e3e3;
+    z-index: 1;
 }
 
 
@@ -2541,6 +2542,7 @@ Usage (In Ghost editor):
 #cta-right .cta-content img {
     max-width: 240px;
     margin:auto;
+    height: 125px; /* prevent content shuffling on slow connections */
 }
 
 #cta-right .cta-content .btn-container {
@@ -2554,3 +2556,10 @@ Usage (In Ghost editor):
     text-transform: uppercase;
     text-shadow: 1px 1px lightGray;
 }
+
+#cta-right .cta-close {
+    text-align: right;
+    color: gray;
+    padding-right: 12px;
+}
+

@@ -46,7 +46,10 @@ into the {body} of the default.hbs template --}}
             <section class="post-full-content">
                 <aside id="cta-right" style="display: none">
                     <header>
-                        <h4>Want <strong>Unlimited</strong> Access?</h4>
+                        <div id="cta-close" class="cta-close">
+                            <span style="font-size: 16px">X</span>
+                        </div>
+                        <h4 style="margin-top: 0">Want <strong>Unlimited</strong> Access?</h4>
                         <p>Sign up for a SpyFu premium plan</p>
                     </header>
                     <section class="cta-content">
@@ -227,19 +230,28 @@ $(document).ready(function () {
         $('[data-nacho="email-form"]').show()
     }
 
-    function onNachoScroll() {
-        var wideContentHeight = 1080;
-        var minWidth = 1600;
+    var userClosedCTA = false;
 
-        if ($(window).scrollTop() > wideContentHeight && $(window).width() > minWidth) {
-            $('#cta-right').show();
-        }
-        if ($(window).scrollTop() < wideContentHeight) {
-            $('#cta-right').hide();
+    function onNachoScroll() {
+        if (!userClosedCTA) {
+            var heroHeight = 1080;
+            var minWidth = 751;
+
+            if ($(window).scrollTop() > heroHeight && $(window).width() > minWidth) {
+                $('#cta-right').show();
+            }
+            if ($(window).scrollTop() < heroHeight) {
+                $('#cta-right').hide();
+            }
         }
     }
     window.addEventListener('scroll', onNachoScroll, {passive: true});
     
+    $('#cta-close').click(function() {
+        userClosedCTA = true;
+        $('#cta-right').hide();
+    });
+
     // resize code examples to correct height
     function auto_grow(element) {
         element.style.height = "5px";
