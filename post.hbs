@@ -238,10 +238,10 @@ $(document).ready(function () {
             var minWidth = 751;
 
             if ($(window).scrollTop() > heroHeight && $(window).width() > minWidth) {
-                $('#cta-right').show();
+                $('#cta-right').fadeIn(200);
             }
             if ($(window).scrollTop() < heroHeight) {
-                $('#cta-right').hide();
+                $('#cta-right').fadeOut(200);
             }
         }
     }
@@ -249,7 +249,7 @@ $(document).ready(function () {
     
     $('#cta-close').click(function() {
         userClosedCTA = true;
-        $('#cta-right').hide();
+        $('#cta-right').fadeOut(200);
     });
 
     // resize code examples to correct height
