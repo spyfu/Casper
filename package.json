@@ -1,7 +1,7 @@
 {
-    "name": "nacho",
-    "description": "Nacho Analytics theme for Ghost",
-    "version": "2.9.10",
+    "name": "spyfu",
+    "description": "SpyFu theme for Ghost",
+    "version": "2.9.11",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
@@ -17,7 +17,7 @@
         "postship": "git fetch && gulp release"
     },
     "author": {
-        "name": "Ghost Foundation/Nacho",
+        "name": "Ghost Foundation/SpyFu",
         "email": "hello@ghost.org",
         "url": "https://ghost.org"
     },
