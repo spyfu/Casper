@@ -8,6 +8,10 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
+
+  window.onload = function(){
+      document.querySelector('.gsc-input input').placeholder = 'Search Posts';
+  };
 </script>
 <style>
 button.gsc-search-button {
@@ -21,11 +25,16 @@ button.gsc-search-button:hover {
     color: #E67E22;
 }
 .gsc-input {
-    content: "yolo";
+    background-image: none !important;
+    text-indent: 0px !important;
 }
 
 .gsc-search-button:hover svg {
     fill: #E67E22;
 }
+
+.gsc-completion-container img {
+    display: none !impotant;
+}
 </style>
-<gcse:searchbox-only resultsUrl="/results" autoCompleteMatchType="any" autoCompleteMaxCompletions="5" enableHistory="true" enableAutoComplete="true"></gcse:searchbox-only>
+<gcse:searchbox-only resultsUrl="/blog/staging/results" autoCompleteMatchType="any" autoCompleteMaxCompletions="5" enableHistory="true" enableAutoComplete="true"></gcse:searchbox-only>
