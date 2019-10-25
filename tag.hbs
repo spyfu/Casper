@@ -17,11 +17,11 @@
             </h1>
         <div class="tags-dropdown" data-nacho="faux-options" style="display: none;">
             {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-            {{#foreach tags}}
+            {{#each tags}}
             <a href='{{ url }}' class="nacho-link nacho-category-dropdown">
                 <h2>{{ name }}</h2>
             </a>
-            {{/foreach}}
+            {{/each}}
             {{/get}}
         </div>
     </div>
@@ -32,10 +32,10 @@
 <main id="site-main" class="site-main outer">
     <div class="inner">
         <div class="post-feed">
-            {{#foreach posts}}
+            {{#each posts}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
-            {{/foreach}}
+            {{/each}}
         </div>
     </div>
 </main>

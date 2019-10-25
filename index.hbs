@@ -13,18 +13,17 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
-
         <div class="post-feed">
             {{#get "posts" limit="all" filter="featured:true" as |featured|}}
-                {{#foreach featured}}
+                {{#each featured}}
                     {{> "post-card"}}
-                {{/foreach}}
+                {{/each}}
             {{/get}}
             {{> "email-form"}}
             {{#get "posts" limit="all" filter="featured:false" as |featured|}}
-                {{#foreach posts}}
+                {{#each posts}}
                     {{> "post-card"}}
-                {{/foreach}}
+                {{/each}}
             {{/get}}
         </div>
     </div>

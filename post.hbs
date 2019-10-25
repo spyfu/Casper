@@ -125,9 +125,9 @@ into the {body} of the default.hbs template --}}
                     <div class="read-next-divider">{{> "icons/infinity"}}</div>
                     <div class="read-next-card-content">
                         <ul>
-                            {{#foreach related_posts}}
+                            {{#each related_posts}}
                             <li><a href="{{url}}">{{title}}</a></li>
-                            {{/foreach}}
+                            {{/each}}
                         </ul>
                     </div>
                     <footer class="read-next-card-footer">
