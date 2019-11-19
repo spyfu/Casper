@@ -2511,18 +2511,24 @@ Usage (In Ghost editor):
 }
 
 #cta-right {
-    width: 260px;
-    height: 546px;
-    position: fixed;
-    left: 18px;
-    bottom: 8px;
-    background-color: white;
-    border-radius: 6px;
-    text-align: center;
-    border: 1px solid red;
-    z-index: 1;
+    display: none;
 }
 
+@media (min-height: 626px) {
+    #cta-right {
+        display: inline;
+        width: 260px;
+        height: 546px;
+        position: fixed;
+        left: 18px;
+        bottom: 8px;
+        background-color: white;
+        border-radius: 6px;
+        text-align: center;
+        border: 1px solid red;
+        z-index: 1;
+    }
+}
 
 #cta-right .cta-content {
     padding: 12px;
