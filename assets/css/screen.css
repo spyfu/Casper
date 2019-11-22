@@ -2525,7 +2525,6 @@ Usage (In Ghost editor):
         background-color: white;
         border-radius: 6px;
         text-align: center;
-        border: 1px solid red;
         z-index: 1;
     }
 }
