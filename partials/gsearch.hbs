@@ -1,0 +1,42 @@
+<style>
+    .cse .gsc-control-cse, .gsc-control-cse {
+        padding: 0px !important
+    }
+
+    .gsc-search-button:hover {
+        background-color: #fff;
+    }
+
+    .gsc-search-button:focus {
+        outline: none;
+    }
+
+    .gsc-search-button:hover svg {
+        fill: #4D90FE;
+    }
+
+    .textbox {
+        display: none;
+        width: 240px;
+    }
+
+    @media (min-width: 900px) {
+        .textbox { display: block; width: 200px }
+    }
+
+    @media (min-width: 1024px) {
+        .textbox { width: 320px }
+    }
+</style>
+
+<div class="textbox">
+    <div class="gcse-search"></div>
+</div>
+
+<script async src="https://cse.google.com/cse.js?cx=012439388567797440545:tmt7xcprx08"></script>
+
+<script>
+window.onload = function(){
+    document.getElementById('gsc-i-id1').placeholder = 'Search';
+};
+</script>
